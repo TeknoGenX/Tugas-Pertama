@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Saya dengan Bootstrap</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/landing_page.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Website Saya</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home">Header</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Biodata</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Galeri">Galeri</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header Section -->
+<section class="py-5 bg-warning" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1>Selamat Datang di Website Saya</h1>
+        <p>Ini adalah contoh header dengan dua kolom. Kolom sebelah kiri berisi teks seperti ini.</p>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#infoModal">
+          Pelajari lebih lanjut
+        </button>
+      </div>
+      <div class="col-md-6">
+        <img src="../IMG/1.png" class="img-fluid rounded" alt="Gambar Placeholder">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="infoModalLabel">Informasi Tambahan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Ini adalah informasi tambahan yang muncul saat tombol diklik.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Me Section -->
+<section class="py-5 bg-success text-white" id="about">
+  <div class="container text-center">
+    <h2>About Me</h2>
+    <p>A brief introduction about myself</p>
+    <div class="row mt-4">
+      <div class="col-6 col-md-4 col-lg-2 mb-3">Full Name</div>
+      <div class="col-6 col-md-4 col-lg-2 mb-3">Education</div>
+      <div class="col-6 col-md-4 col-lg-2 mb-3">Pekerjaan</div>
+      <div class="col-6 col-md-4 col-lg-2 mb-3">Contact</div>
+      <div class="col-6 col-md-4 col-lg-2 mb-3">Hobi</div>
+      <div class="col-6 col-md-4 col-lg-2 mb-3">Alamat</div>
+    </div>
+  </div>
+</section>
+
+<!-- Carousel Section -->
+<section class="py-5 bg-light" id="Galeri">
+  <div class="container">
+    <h2 class="text-center mb-4">Galeri</h2>
+    <div class="mx-auto" style="max-width: 900px;">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1623869694958-afca16077078?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" style="height: auto; max-height: 500px; object-fit: cover;" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1678270661614-e9ef5e0ec52b?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" style="height: auto; max-height: 500px; object-fit: cover;" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1719686777019-cefda710abe0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" style="height: auto; max-height: 500px; object-fit: cover;" alt="Slide 3">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- From tambah produk -->
+ <form action="../PHP/simpan_produk.php" method="POST" class="mb-5">
+  <div class="row g-2">
+    <div class="col-md-3">
+      <input type="text" name="nama" class="form-control" placeholder="Nama Produk" required>
+    </div>
+    <div class="col-md-2">
+      <input type="number" name="harga" class="form-control" placeholder="Harga" required>
+    </div>
+    <div class="col-md-2">
+      <input type="number" name="stok" class="form-control" placeholder="Stok" required>
+    </div>
+    <div class="col-md-3">
+      <input type="text" name="deskripsi" class="form-control" placeholder="Deskripsi">
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-success w-100">Simpan</button>
+    </div>
+  </div>
+</form>
+
+<!-- Produk Section -->
+<section class="py-5 bg-light" id="produk">
+  <div class="container">
+    <h2 class="text-center mb-4">Daftar Produk</h2>
+
+    <!-- Filter -->
+    <div class="mb-4 text-center">
+      <select id="categoryFilter" class="form-select w-auto d-inline-block">
+        <option value="all">Semua Kategori</option>
+        <option value="elektronik">Elektronik</option>
+        <option value="pakaian">Pakaian</option>
+        <option value="makanan">Makanan</option>
+      </select>
+    </div>
+
+    <!-- Daftar Produk -->
+    <div class="row" id="productList"></div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="py-5 bg-purple text-white" id="portfolio" style="background-color:#9b59b6;">
+  <div class="container text-center">
+    <h2>Portfolio</h2>
+    <div class="row mt-4">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card bg-light text-dark">
+          <img src="../IMG/1.png" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Deskripsi singkat tentang project 1.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card bg-light text-dark">
+          <img src="../IMG/1.png" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">Deskripsi singkat tentang project 2.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card bg-light text-dark">
+          <img src="../IMG/1.png" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">Deskripsi singkat tentang project 3.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card bg-light text-dark">
+          <img src="../IMG/1.png" class="card-img-top" alt="Project 4">
+          <div class="card-body">
+            <h5 class="card-title">Project 4</h5>
+            <p class="card-text">Deskripsi singkat tentang project 4.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../JS/landing_page.js"></script>
+
+<script>
+  const products = [
+    {
+      nama: "Laptop ASUS",
+      harga: 10000000,
+      deskripsi: "Laptop gaming dengan performa tinggi.",
+      gambar: "https://images.unsplash.com/photo-1698512475067-74ed7c956c8d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      kategori: "elektronik"
+    },
+    {
+      nama: "Kaos Polos",
+      harga: 50000,
+      deskripsi: "Kaos nyaman untuk sehari-hari.",
+      gambar: "https://images.unsplash.com/photo-1657364890995-1ec4bb3aefcf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      kategori: "pakaian"
+    },
+    {
+      nama: "Coklat Premium",
+      harga: 35000,
+      deskripsi: "Coklat lezat dengan kualitas premium.",
+      gambar: "https://plus.unsplash.com/premium_photo-1667031518595-9cb4b0d504ef?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      kategori: "makanan"
+    },
+    {
+      nama: "Smartphone",
+      harga: 2500000,
+      deskripsi: "Smartphone dengan fitur lengkap.",
+      gambar: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1227&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      kategori: "elektronik"
+    }
+  ];
+
+  const productList = document.getElementById("productList");
+  const categoryFilter = document.getElementById("categoryFilter");
+
+  function tampilkanProduk(kategori = "all") {
+    productList.innerHTML = "";
+    const filtered = kategori === "all" ? products : products.filter(p => p.kategori === kategori);
+    filtered.forEach(product => {
+      productList.innerHTML += `
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="${product.gambar}" class="card-img-top" alt="${product.nama}">
+            <div class="card-body">
+              <h5 class="card-title">${product.nama}</h5>
+              <p class="card-text">${product.deskripsi}</p>
+              <p class="card-text fw-bold">Rp ${product.harga.toLocaleString()}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  // Inisialisasi tampilan dan event filter
+  tampilkanProduk();
+  categoryFilter.addEventListener("change", () => {
+    tampilkanProduk(categoryFilter.value);
+  });
+</script>
+
+</body>
+</html>

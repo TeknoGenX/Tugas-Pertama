@@ -1,17 +1,15 @@
 <?php
-$koneksi = new mysqli("localhost", "root", "", "ecommerce");
+include 'koneksi.php';
 
 $nama = $_POST['nama'];
 $harga = $_POST['harga'];
 $stok = $_POST['stok'];
 $deskripsi = $_POST['deskripsi'];
 
-$sql = "INSERT INTO products (nama, harga, deskripsi, stok)
-        VALUES ('$nama', '$harga', '$deskripsi', '$stok')";
-
-if ($koneksi->query($sql) === TRUE) {
-    echo "Produk berhasil disimpan.";
+$sql = "INSERT INTO produk (nama, harga, stok, deskripsi) VALUES ('$nama', '$harga', '$stok', '$deskripsi')";
+if (mysqli_query($conn, $sql)) {
+    header("Location: ../Tugas_7.html"); // Redirect ke halaman utama
 } else {
-    echo "Error: " . $sql . "<br>" . $koneksi->error;
+    echo "Gagal menyimpan produk: " . mysqli_error($conn);
 }
 ?>

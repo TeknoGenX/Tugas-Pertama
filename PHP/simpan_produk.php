@@ -6,10 +6,11 @@ $harga = $_POST['harga'];
 $stok = $_POST['stok'];
 $deskripsi = $_POST['deskripsi'];
 
-$sql = "INSERT INTO produk (nama, harga, stok, deskripsi) VALUES ('$nama', '$harga', '$stok', '$deskripsi')";
-if (mysqli_query($conn, $sql)) {
-    header("Location: ../Tugas_7.html"); // Redirect ke halaman utama
-} else {
-    echo "Gagal menyimpan produk: " . mysqli_error($conn);
-}
+$sql = "INSERT INTO produk (nama, harga, stok, deskripsi) VALUES (?, ?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sdis", $nama, $harga, $stok, $deskripsi);
+$stmt->execute();
+
+header("Location: ../HTML/Tugas_8.html");
+exit();
 ?>

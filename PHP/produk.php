@@ -1,20 +1,12 @@
 <?php
 include 'koneksi.php';
 
-$kategori = $_GET['kategori'] ?? 'all';
-$query = "SELECT * FROM produk";
+$result = $conn->query("SELECT * FROM produk");
+$data = [];
 
-if ($kategori != 'all') {
-    $query .= " WHERE kategori = '$kategori'";
+while ($row = $result->fetch_assoc()) {
+    $data[] = $row;
 }
 
-$result = mysqli_query($conn, $query);
-$produk = [];
-
-while ($row = mysqli_fetch_assoc($result)) {
-    $produk[] = $row;
-}
-
-header('Content-Type: application/json');
-echo json_encode($produk);
+echo json_encode($data);
 ?>
